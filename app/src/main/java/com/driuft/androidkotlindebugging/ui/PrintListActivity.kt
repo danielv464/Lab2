@@ -24,11 +24,9 @@ class PrintListActivity : AppCompatActivity() {
         wordList.text = combinedWords()
     }
 
-    private fun combinedWords(): String {
-        var combined = ""
-        for (idx in 0 until words.size + 1) {
-            combined += "${words[idx]}\n"
-        }
+    private fun combinedWords(): String{
+        var combined = words.joinToString(separator="\n", prefix="", postfix ="")
         return combined
     }
+
 }
